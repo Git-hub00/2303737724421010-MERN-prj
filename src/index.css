@@ -1,0 +1,199 @@
+/* Tailwind Imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #e5e7eb; /* Light Gray with a subtle shade */
+  border-radius: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #ff5f6d, #ffc371);
+}
+
+/* Scrollbar Corner */
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+/* Body Background */
+body {
+  background: linear-gradient(to right, #f9fafb, #f3f4f6);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply bg-gradient-to-r from-yellow-500 to-orange-600 text-white font-bold py-2 px-5 rounded-xl shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-xl;
+}
+.btn-primary:hover {
+  background: linear-gradient(to right, #ffa751, #ff5c5c);
+}
+
+.btn-secondary {
+  @apply bg-gradient-to-r from-blue-500 to-purple-600 text-white font-bold py-2 px-5 rounded-xl shadow-md transition-all duration-300 transform hover:scale-105 hover:shadow-xl;
+}
+.btn-secondary:hover {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+}
+
+/* Input Styles */
+input, textarea {
+  @apply border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-400 rounded-lg p-3 transition-all shadow-sm hover:shadow-md;
+}
+
+/* Card Styles */
+.card {
+  @apply bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition-transform duration-300 transform hover:-translate-y-1;
+}
+
+.card-header {
+  @apply bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-5 font-bold text-lg shadow-md;
+}
+
+.card-body {
+  @apply p-5 text-gray-700;
+}
+
+/* Navbar */
+.navbar {
+  @apply bg-gradient-to-r from-blue-700 to-indigo-800 text-white py-4 px-8 shadow-lg;
+}
+
+.navbar a {
+  @apply text-white px-4 py-2 hover:text-yellow-400 transition-colors duration-200;
+}
+
+/* Product Grid */
+.product-grid {
+  @apply grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 p-6;
+}
+
+/* Product Card */
+.product-card {
+  @apply bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105;
+}
+
+.product-card img {
+  @apply w-full h-56 object-cover transition-transform duration-300 hover:scale-110;
+}
+
+.product-card .info {
+  @apply p-5;
+}
+
+.product-card h3 {
+  @apply text-lg font-bold text-gray-800 mb-2;
+}
+
+.product-card p {
+  @apply text-sm text-gray-500;
+}
+
+/* Footer */
+.footer {
+  @apply bg-gray-900 text-white text-center py-6 mt-12;
+}
+
+.footer a {
+  @apply text-yellow-400 hover:text-yellow-500 transition-colors duration-200;
+}
+
+/* Badges */
+.badge {
+  @apply inline-block bg-yellow-400 text-black text-xs font-bold px-3 py-1 rounded-full uppercase;
+}
+
+.badge-sale {
+  @apply bg-red-500 text-white;
+}
+
+.badge-new {
+  @apply bg-green-500 text-white;
+}
+
+/* List Styles (Right Side) */
+.list-container {
+  position: fixed;
+  right: 20px;
+  top: 100px;
+  width: 300px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 999;
+}
+
+.list-container ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-container li {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.list-container li:last-child {
+  border-bottom: none;
+}
+
+.list-container li:hover {
+  background: linear-gradient(135deg, #ff9f00, #ff5c5c);
+  color: white;
+  cursor: pointer;
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse 2.5s infinite;
+}
+
+/* Hover Effects */
+.hover-scale {
+  transition: transform 0.3s ease-in-out;
+}
+.hover-scale:hover {
+  transform: scale(1.08);
+}
+
+/* Glow Effect for Buttons */
+.glow {
+  box-shadow: 0 0 12px rgba(255, 95, 109, 0.6), 0 0 24px rgba(255, 159, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+.glow:hover {
+  box-shadow: 0 0 20px rgba(255, 95, 109, 0.8), 0 0 36px rgba(255, 159, 0, 0.7);
+}
